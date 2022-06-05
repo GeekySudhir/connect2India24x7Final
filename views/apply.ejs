@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <% include layout %>
+    <link rel="stylesheet" href="/stylesheets/apply.css" />
+</head>
+
+<body>
+    <% include includes/nav %>
+    <div class="container-apply">
+        <span class="big-circle"></span>
+        <img src="/images/shape.png" class="square" alt="" />
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                    Just fill-up some details and relax we will take forward
+                    from here. All the best!!
+                </p>
+
+                <div class="info">
+                    <div class="information">
+                        <img src="/images/location.png" class="icon" alt="" />
+                        <p>Shop no-3, Ground floor, Nirmal Prem building, Sankoshai Road no-5, Dimna road, Mango
+                            Jamshedpur - 831012</p>
+                    </div>
+                    <div class="information">
+                        <img src="/images/email.png" class="icon" alt="" />
+                        <p>Connect2india247@gmail.com</p>
+                    </div>
+                    <div class="information">
+                        <img src="/images/phone.png" class="icon" alt="" />
+                        <p>+91-7870941637/9939193508</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p><b>We are also on :</b></p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+                <form action="connect2india247@gmail.com" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <input type="hidden" name="_template" value="table">
+                    <h3 class="title">Contact us</h3>
+                    <div class="input-container">
+                        <input type="text" name="name" class="input" placeholder="Name" required />
+                    </div>
+
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" placeholder="Email" required />
+                    </div>
+
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" placeholder="Phone" required />
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="Message" class="input" placeholder="Applying For.." required />
+                    </div>
+                    <div>
+                        <input type="file" id ="f02" name="attachment" accept="pdf, pdf" placeholder="Add Resume/Cv" required >
+                        <label for="f02">Add Resume/Cv</label>
+                    </div>
+                    <br>
+                    <input type="submit" value="Send" class="btn" />
+                    <input type="hidden" name="_autoresponse" value="You form was received by us! @connect2india247">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll(".input");
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+        }
+
+        function blurFunc() {
+            let parent = this.parentNode;
+            if (this.value == "") {
+                parent.classList.remove("focus");
+            }
+        }
+        inputs.forEach((input) => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc);
+        });
+    </script>
+</body>
+
+</html>

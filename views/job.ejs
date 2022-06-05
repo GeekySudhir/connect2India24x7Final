@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% include layout %>
+    <link rel="stylesheet" href="/stylesheets/jobs.css">
+
+</head>
+
+<body>
+    <% include includes/nav %>
+    <div class="banner">
+        <div class="bannerbg">
+            <div class="title">
+                <h4 align="center"> <i class="material-icons small">person</i> <%= data.position %> | <i class="material-icons small">pin_drop</i>
+                    <%= data.location.toUpperCase() %> </h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="job-info">
+            <div class="row">
+                <div class="col l2 s5">
+                    <div class="chip">
+                        <b>
+                            Position
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s7 ">
+                    <b><%= data.position  %></b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l2 s5">
+                    <div class="chip">
+                        <b>
+                            Company
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s7">
+                    <%= data.company  %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l2 s5">
+                    <div class="chip">
+                        <b>
+                            Location
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s5">
+                    <%= data.location  %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l2 s5">
+                    <div class="chip">
+                        <b>
+                            Qualification
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s7">
+                    <%= data.qualification  %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l2 s5">
+                    <div class="chip">
+                        <b>
+                            Gender
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s7">
+                    <%= data.gender  %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l2 s12">
+                    <div class="chip">
+                        <b>
+                            Description
+                        </b>
+                    </div>
+                </div>
+                <div class="col l10 s12">
+                    <%= data.description  %>
+                </div>
+            </div>
+            <a class="btn btn-warning blue center" href="/apply">Apply </a>
+
+        </div>
+
+    </div>
+    <% include includes/footer %>
+
+</body>
+
+</html>

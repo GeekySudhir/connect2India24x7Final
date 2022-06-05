@@ -1,0 +1,118 @@
+<% include ../layout %>
+<!-- <div class="simple-carousel">
+    <a href="#" class="control_next"><i class="fa fa-chevron-right"></i></a>
+    <a href="#" class="control_prev"><i class="fa fa-chevron-left"></i></a>
+    <ul>
+      <li class="slide" style="background-image: url('https://wallpapershome.com/images/pages/pic_h/18677.jpg');"></li>
+      <li class="slide" style="background-image: url('https://wallpapershome.com/images/pages/pic_h/23795.jpg');"></li>
+      <li class="slide" style="background-image: url('https://wallpapershome.com/images/pages/pic_h/23794.jpg');"></li>
+      <li class="slide" style="background-image: url('https://wallpapershome.com/images/pages/pic_h/4589.jpg');"></li>
+    </ul>
+  </div> -->  
+
+  <!-- Previous carousel not working so enetring new one -->
+
+
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://res.cloudinary.com/cinematvs/image/upload/v1653512682/frontpage0_pu0ogb.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <!-- <h3>"Building the lives of people"!</h3>
+          <h5 class="light grey-text text-lighten-3">"Make your career with us"
+        </h5> -->
+        </div>
+      </li>
+      <!-- <li>
+        <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869">
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li> -->
+      <li>
+        <img src="https://img.ehstoday.com/files/base/ebm/ehstoday/image/2021/11/construction__Visoot_Uthairam.6185431550e5d.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630"> <!-- random image -->
+        <div class="caption right-align">
+          <h3> Opportunities don't happen, you create them</h3>
+          <h5 class="light grey-text text-lighten-3">There are no shortcuts to Success. Connect 2 India makes one !!</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870"> <!-- random image -->
+        <div class="caption center-align">
+          <h3> “Rome wasn't built in a day” !</h3>
+          <h5 class="light grey-text text-lighten-3">It takes time to create great work</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<script>
+// $(document).ready(function () {
+//     alert("ready")
+//   simpleCarousel($(".simple-carousel"), 5000);
+// });
+
+// function simpleCarousel(carousel, intervalTime = 5000) {
+//   var slideCount = $(carousel).find("ul li.slide").length;
+//   console.log("slideCount",slideCount)
+//   var activeSlide = 0;
+
+//   function showSlide() {
+//     $(carousel)
+//       .find("ul li.slide")
+//       .each(function (index) {
+//         if (index == activeSlide) {
+//           $(this).fadeIn();
+//         } else {
+//           $(this).fadeOut();
+//         }
+//       });
+//   }
+
+//   setInterval(function () {
+//     moveRight();
+//   }, intervalTime);
+
+//   function moveLeft() {
+//     activeSlide -= 1;
+//     console.log(activeSlide)
+//     if (activeSlide <= 0) {
+//       activeSlide = slideCount - 1;
+//     }
+//     showSlide();
+//   }
+
+//   function moveRight() {
+//     activeSlide += 1;
+//     if (activeSlide >= slideCount) {
+//       activeSlide = 0;
+//     }
+//     showSlide();
+//   }
+
+//   $(carousel)
+//     .find("a.control_prev")
+//     .click(function () {
+//       moveLeft();
+//     });
+
+//   $(carousel)
+//     .find("a.control_next")
+//     .click(function () {
+//       moveRight();
+//     });
+// }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+</script>

@@ -1,0 +1,124 @@
+<html>
+
+<head>
+
+    <% include ../layout %>
+    <link rel="stylesheet" href="/stylesheets/jobs.css">
+</head>
+
+<body>
+    <% include ../includes/nav %>
+    <div class="banner">
+        <div class="bannerbg">
+            <div class="title center">
+                <h4 align="center"><b> SEARCH AND CUSTOMIZE THE JOB</b></h4>
+                <br>
+                <span>
+                    <a href="/admin/cat/connect/new/add/job" class="btn-large waves-effect waves-light green darken-2">
+                        <i class="material-icons left">add</i>ADD NEW JOBS</a>
+                    <a href="/admin/cat/connect/new/list/job"
+                        class="btn-large waves-effect waves-light orange darken-2"> <i
+                            class="material-icons left">delete</i>DELETE,VIEW JOBS</a>
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="display-log">
+            <% if (status==false) { %>
+            <div class="failed-status">
+                <div>
+
+                    <i class="small material-icons">error</i>
+                </div>
+                <div class="status-text">
+
+                    Failed to delete the job.
+                </div>
+            </div>
+            <% } %>
+            <% if (status==true) { %>
+            <div class="success-status">
+                <div>
+                    <i class="small material-icons">delete</i>
+                </div>
+                <div class="status-text">
+                    Job was deleted!
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="main">
+
+        <div class="table-container">
+            <input class="search" type="text" align="center" placeholder="search for jobs">
+
+            <table class="striped" id="myTable">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Position</th>
+                        <th>Job Code</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Age Limit</th>
+                        <th>Qualification</th>
+                        <th>Gender</th>
+                        <th>Exp(Yrs)</th>
+                        <th>Created On</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for(var i=0; i < data.length; i++) { %>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= data[i].position %></td>
+                        <td><%= data[i].code %></td>
+                        <td><%= data[i].company %></td>
+                        <td><%= data[i].location %></td>
+                        <td><%= data[i].ageLimit %></td>
+                        <td><%= data[i].qualification %></td>
+                        <td><%= data[i].gender %></td>
+                        <td><%= data[i].experience %></td>
+                        <td><%= data[i].createdOn.toLocaleDateString() %></td>
+                        <td>
+                            <button class="delete-job btn waves-effect waves-light btn-small red"
+                                onclick="handleDelete()">
+                                <i class="small material-icons">delete</i>
+                            </button>
+                            <a href=<%= "/admin/cat/connect/new/job/delete/"+data[i]._id %>
+                                class="waves-effect waves-light btn-small hide red-text">Delete</a>
+                        </td>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <% include ../includes/footer %>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".delete-job").click(function () {
+            alert("Warning : You are going to delete a job posting")
+            $(this).addClass("hide");
+            $(this).siblings().removeClass("hide");
+
+        });
+        $(".search").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    })
+</script>
+
+</html>

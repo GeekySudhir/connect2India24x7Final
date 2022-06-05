@@ -1,0 +1,169 @@
+<html>
+
+<head>
+  <title> <%= title %></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <% include layout %>
+  <link rel="stylesheet" href="/stylesheets/index.css">
+
+
+
+
+</head>
+
+<!-- Adding whatsapp Extension -->
+
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+  (function () {
+      var options = {
+          whatsapp: "7870941637", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          button_color: "#FF6550", // Color of button
+          position: "right", // Position may be 'right' or 'left'
+          pre_filled_message: "Hi! Sir i am intreseted in!", // WhatsApp pre-filled message
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+  })();
+</script>
+<!-- /GetButton.io widget -->
+
+<!-- Exit code -->
+<body>
+  <% include includes/nav %>
+  <% include includes/slider2 %>
+
+
+  <div class="main">
+
+
+
+    <div class="container">
+      <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row center" style="margin-top:10px">
+          <h4 style=color:black><b>We are hiring apply now!</b></h4>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- end of container section -->
+  <div class="btnfixed">
+    <a href="/jobs" id="download-button" class="btn-large waves-effect waves-light blue darken-2">
+      <i class="material-icons left">search</i> Search Jobs!
+    </a>
+  </div>
+  <!-- start of list section -->
+  <div class="list-main">
+  <div class="div1-tiles">
+    <a href="/jobs"> <div>B.Tech</div> </a>
+    <a href="/jobs"> <div>Diploma</div> </a>
+    <a href="/jobs"> <div> BBA</div> </a>
+    <a href="/jobs"> <div> MBA</div> </a>
+    <a href="/jobs"> <div> MCA</div> </a>
+    <a href="/jobs"> <div> Graduates</div> </a>
+    <a href="/jobs"> <div> Civil Jobs</div> </a>
+    </div>
+    <div class="div1-tiles-img">
+    </div>
+    <div class="div1-tiles">
+      <a href="/apply"> <div> Aptitude Assessment</div> </a>
+      <a href="/apply"> <div>Job Search Correspondence</div></a>
+      <a href="/apply"> <div> Guidance on Self-Employment</div></a>
+      <a href="/apply"> <div> Comprehensive Career Assessment</div></a>
+      <a href="/apply"> <div> Interview Preparation</div></a>
+      <a href="/apply"> <div> Admission Advice</div></a>
+      <a href="/apply"> <div> Civil Jobs - Interview Preparation</div></a>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- end of list section -->
+
+  <!-- start of words from campany -->
+  <div class="words">
+    <div class="container">
+      <div class="message center">
+        <h3><b>"We provide opportunity to every student of this country to showcase their talent & ensure maximum
+            placements." </b></h3>
+        <span> - Connect2India</span> <span> | Team</span>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">“Rome wasn't built in a day” - It takes time to create great work</h5>
+        </div>
+      </div>
+    </div> -->
+  <!-- <div class="parallax"><img src="/images/hands.jpg" alt="Unsplashed background img 2"></div> -->
+  <!-- <div class="parallax"><img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=746" alt="Unsplashed background img 2"></div>
+  </div> -->
+  <!-- caurosel option starts here -->
+
+  <div class="container-sslider">
+    <% include includes/slidermaterial %>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h3>Success Stories</h3>
+          <!-- <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id
+            nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies
+            eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et
+            pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed.
+            Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam
+            eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae;</p> -->
+
+          <div class="reviews">
+            <% include includes/reviews %>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/images/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div> -->
+
+
+
+  </div>
+  <% include includes/footer %>
+
+  <script>
+  </script>
+</body>
+
+
+
+</html>

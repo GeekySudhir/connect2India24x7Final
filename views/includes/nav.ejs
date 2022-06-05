@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="/stylesheets/nav.css">
+<div class="navbar">
+    <nav class="  navbar-custom ">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo left white-text">
+                <img src="/images/logo/logo.png"></img>
+            </a>
+            <ul class="right hide-on-med-and-down ">
+                <li><a href="/">
+                        <span>
+                            <!-- <i class="material-icons">home</i> -->
+                            Home
+                        </span>
+                        <!-- <span>
+                                    &nbsp; Home
+                                </span> -->
+
+                    </a></li>
+                <li><a href="/jobs">
+                        <span>
+                            <!-- <i class="material-icons">business_center</i>
+                                     -->
+                            Jobs
+                        </span>
+                        <!-- <span>
+                                    &nbsp; Job
+                                </span> -->
+
+                    </a></li>
+                <li><a href="/apply">
+                        <span>
+                            <!-- <i class="material-icons">mail</i> -->
+                            Apply
+                        </span>
+                        <!-- <span>
+                                    &nbsp; Apply
+                                </span> -->
+
+                    </a></li>
+                <!-- <li><a href="/valid">
+                                <span>
+                                    Admin
+                                </span>
+                            </a></li> -->
+
+            </ul>
+            <ul class="right">
+                <li onclick="openNav()" class=" hide-on-med-and-up show-on-medium-and-down menu-icon ">
+                    <a href="#">
+
+                        <span>
+                            <i class="material-icons">menu</i>
+
+                        </span>
+                        <!-- <span>
+                                        &nbsp; Admin
+                                    </span> -->
+
+                    </a></li>
+            </ul>
+
+
+            <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/">
+            <span>
+                <i class="material-icons left">home</i>
+
+            </span>
+            Home
+        </a>
+        <a href="/jobs">
+            <span>
+                <i class="material-icons left">business_center</i>
+
+            </span>
+            Jobs
+
+        </a>
+        <a href="/apply">
+            <span>
+                <i class="material-icons left">mail</i>
+
+            </span>
+            Apply
+
+        </a>
+
+        <!-- <a href="/valid">
+            <span>
+                <i class="material-icons left">settings</i>
+
+            </span>
+            Admin
+
+        </a> -->
+    </div>
+
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>

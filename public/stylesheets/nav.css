@@ -1,0 +1,130 @@
+.nav-wrapper i {
+  color: rgba(22, 22, 22, 0.7) !important;
+}
+
+nav {
+  padding: 10px 0px;
+  height: 80px !important;
+  box-shadow: none;
+  background-color: #fff !important;
+  /* border-bottom: 2px solid dodgerblue; */
+}
+
+nav li a {
+  color: rgba(22, 22, 22, 0.7) !important;
+}
+
+.nav-wrapper ul {
+  margin-right: 40px;
+}
+
+.nav-fixed {}
+
+.brand-logo {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 750px) {
+  .brand-logo {
+    margin-left: -10px !important;
+  }
+}
+
+.brand-logo img {
+  height: 80px;
+  margin-top: -10px;
+}
+
+nav li a {
+  display: flex;
+  justify-content: center;
+  width: 70px !important;
+  font-weight: 500;
+}
+
+nav li:hover {
+  background: rgba(25, 118, 210, 1) !important;
+}
+
+nav li a:hover {
+  color: white !important;
+}
+
+/*  all the styles of side nav */
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: rgba(25, 118, 210, 1);
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  box-shadow: 9px 1px 137px -21px rgba(0, 0, 0, 0.47);
+  -webkit-box-shadow: 9px 1px 137px -21px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 9px 1px 137px -21px rgba(0, 0, 0, 0.47);
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  .brand-logo {
+    position: relative !important;
+    left: -20px;
+  }
+}
+
+.menu-icon {
+  position: relative;
+  left: 50px;
+}

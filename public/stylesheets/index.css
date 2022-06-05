@@ -1,0 +1,146 @@
+.banner {
+  height: 60vh;
+  width: 100%;
+  /* background: url("../images/frontpage.JPG"); */
+  background: url("../images/frontpage.JPG");
+
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    background-size: cover;
+    height: 60vh;
+  }
+
+  .banner .title {
+    margin-top: 80px !important;
+  }
+}
+
+/* .bannerbg {
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(222, 222, 222, 0.4));
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: rgba(33, 33, 33, 0.7) !important;
+} */
+
+.banner .title {
+  margin-top: 250px;
+  margin-left: -250px;
+}
+
+.title {
+  margin-top: 50%;
+}
+
+.tiles-heading i {
+  color: rgba(25, 118, 210, 1);
+  /* color:#19227c; */
+}
+
+.tiles-heading span {
+  font-size: 1.5em;
+}
+
+.tiles {
+  padding: 40px 40px !important;
+}
+
+.words {
+  padding: 40px 40px;
+  /* background: rgba(25, 118, 210, 1); */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2;
+}
+
+.words h3 {
+  line-height: 140%;
+  font-weight: 200;
+}
+
+.words span {
+  color: lightskyblue;
+}
+
+.list-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.div1-tiles {
+  list-style: none;
+  color: #fff;
+  line-height: 25px;
+  padding: 0.7em;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  height: 450px;
+  flex-wrap: wrap;
+}
+
+.div1-tiles div {
+  width: 300px !important;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  margin: 5px auto;
+  color: white;
+  padding: 10px 10px;
+}
+
+.div1-tiles-img {
+  width: 300px;
+  background-position-x: -200px;
+}
+
+@media only screen and (max-width: 500px) {
+  .div1-tiles div {
+    margin: 0px auto;
+
+    margin-top: 5px;
+  }
+}
+
+.list-main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list-main div {
+  width: 300px;
+}
+
+.div1-tiles-img {
+  background: url("/images/hiring.jpg");
+  background-size: cover;
+  height: 300px;
+  background-position-x: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .div1-tiles {
+    height: auto;
+  }
+
+  .div1-tiles-img {
+    background-position-x: 0px;
+  }
+
+
+}
+
+.btnfixed {
+  position: absolute;
+  top: 350px;
+  right: 45%;
+  z-index: 90;
+}

@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="/stylesheets/slider.css"> <div class="simple-carousel">
+  <div id="slideshow">
+    <div id="slides">
+        <div class="slide show" data-slide="1">
+            <img src="../images/waitinginterview.jpg"
+                alt="">
+
+            <!-- <div class="content">
+                <span class="title">Slide 1</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias necessitatibus omnis
+                    harum dolore, saepe tempore voluptatum? Facere ducimus aperiam modi ipsam expedita, et sequi
+                    dolorem cumque voluptas ab. Deleniti vitae pariatur debitis aliquid reprehenderit mollitia quas
+                    inventore natus nihil nisi commodi tempora dolorem, ut rerum fugit iure sed officiis.
+                </p>
+            </div> -->
+        </div>
+
+        <div class="slide" data-slide="2">
+            <img src="../images/star-interviewing.jpg" alt="">
+
+            <!-- <div class="content">
+                <span class="title">Slide 2</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias necessitatibus omnis
+                    harum dolore, saepe tempore voluptatum? Facere ducimus aperiam modi ipsam expedita, et sequi
+                    dolorem cumque voluptas ab. Deleniti vitae pariatur debitis aliquid reprehenderit mollitia quas
+                    inventore natus nihil nisi commodi tempora dolorem, ut rerum fugit iure sed officiis.la!
+                </p>
+            </div> -->
+        </div>
+
+        <div class="slide" data-slide="3">
+            <img src="../images/Successful_Job_Interview.jpg" alt="">
+
+            <!-- <div class="content">
+                <span class="title">Slide 3</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias necessitatibus omnis
+                    harum dolore, saepe tempore voluptatum? Facere ducimus aperiam modi ipsam expedita, et sequi
+                    dolorem cumque voluptas ab. Deleniti vitae pariatur debitis aliquid reprehenderit mollitia quas
+                    inventore natus nihil nisi commodi tempora dolorem, ut rerum fugit iure sed officiis.
+                </p>
+            </div> -->
+        </div>
+
+        <!-- <div class="slide" data-slide="4">
+            <img src="https://i.pinimg.com/originals/e6/90/5c/e6905c4ac56db067d3b265763af49d22.jpg" alt="">
+
+            <div class="content">
+                <span class="title">Slide 4</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias necessitatibus omnis
+                    harum dolore, saepe tempore voluptatum? Facere ducimus aperiam modi ipsam expedita, et sequi
+                    dolorem cumque voluptas ab. Deleniti vitae pariatur debitis aliquid reprehenderit mollitia quas
+                    inventore natus nihil nisi commodi tempora dolorem, ut rerum fugit iure sed officiis.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" data-slide="5">
+            <img src="https://wallpaperaccess.com/full/1208210.jpg"
+                alt="">
+
+            <div class="content">
+                <span class="title">Slide 5</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias necessitatibus omnis
+                    harum dolore, saepe tempore voluptatum? Facere ducimus aperiam modi ipsam expedita, et sequi
+                    dolorem cumque voluptas ab. Deleniti vitae pariatur debitis aliquid reprehenderit mollitia quas
+                    inventore natus nihil nisi commodi tempora dolorem, ut rerum fugit iure sed officiis.
+                </p>
+            </div>
+        </div> -->
+
+        <div class="slide-btn next">
+            <span>&raquo;</span>
+        </div>
+
+        <div class="slide-btn prev">
+            <span>&laquo;</span>
+        </div>
+    </div>
+
+    <div id="gallery">
+        <div class="thumbnail" data-slide="1">
+            <img src="../images/logo/logo.png"
+                alt="">
+
+            <div class="content">
+                <span class="title">Thumbnail 1</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                </p>
+            </div>
+        </div>
+
+        <div class="thumbnail" data-slide="2">
+            <img src="../images/logo/logo.png" alt="">
+
+            <div class="content">
+                <span class="title">Thumbnail 2</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                </p>
+            </div>
+        </div>
+
+        <div class="thumbnail" data-slide="3">
+            <img src="../images/logo/logo.png" alt="">
+
+            <div class="content">
+                <span class="title">Thumbnail 3</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                </p>
+            </div>
+        </div>
+
+        <div class="thumbnail" data-slide="4">
+            <img src="../images/logo/logo.png" alt="">
+
+            <div class="content">
+                <span class="title">Thumbnail 4</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                </p>
+            </div>
+        </div>
+
+        <div class="thumbnail" data-slide="5">
+            <img src="../images/logo/logo.png"
+                alt="">
+
+            <div class="content">
+                <span class="title">Thumbnail 5</span>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script>
+    
+    let slides = document.querySelectorAll('.slide');
+let thumbnails = document.querySelectorAll('.thumbnail');
+let currentSlide = document.querySelector('.slide.show');
+let slideCount = slides.length;
+let currentSlideId = currentSlide.dataset.slide;
+let nextSlideBtn = document.querySelector('.slide-btn.next');
+let prevSlideBtn = document.querySelector('.slide-btn.prev');
+let nextSlideTimer = 3000;
+
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', showSlide);
+});
+
+nextSlideBtn.addEventListener('click', nextSlide);
+prevSlideBtn.addEventListener('click', prevSlide);
+
+let slideshow = setInterval(nextSlide, nextSlideTimer);
+
+function showSlide(e) {
+    let slideId = e.currentTarget.dataset.slide;
+
+    currentSlide.classList.remove('show');
+
+    currentSlide = document.querySelector(`.slide[data-slide="${slideId}"`);
+
+    currentSlide.classList.add('show');
+
+    resetSlideShow();
+}
+
+function nextSlide() {
+    let nextSlideId = currentSlideId >= slideCount ? 1 : parseInt(currentSlideId) + 1;
+
+    currentSlide.classList.remove('show');
+
+    currentSlide = document.querySelector(`.slide[data-slide="${nextSlideId}"`);
+    currentSlideId = currentSlide.dataset.slide;
+
+    currentSlide.classList.add('show');
+
+    resetSlideShow();
+}
+
+function prevSlide() {
+    let prevSlideId = currentSlideId <= 1 ? slideCount : parseInt(currentSlideId) - 1;
+
+    currentSlide.classList.remove('show');
+
+    currentSlide = document.querySelector(`.slide[data-slide="${prevSlideId}"`);
+    currentSlideId = currentSlide.dataset.slide;
+
+    currentSlide.classList.add('show');
+
+    resetSlideShow();
+}
+
+function resetSlideShow() {
+    clearInterval(slideshow);
+    slideshow = setInterval(nextSlide, nextSlideTimer);
+}
+  </script>

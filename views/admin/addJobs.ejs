@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% include ../layout %>
+    <link rel="stylesheet" href="/stylesheets/jobs.css">
+
+</head>
+
+<body>
+    <% include ../includes/nav %>
+    <div class="banner">
+        <div class="bannerbg">
+            <div class="title center">
+                <h4 align="center"><b> Admin | Add new Jobs</b> </h4>
+                <br>
+                <span>
+                    <a href="/admin/cat/connect/new/add/job" class="btn-large waves-effect waves-light green darken-2">
+                        <i class="material-icons left">add</i>ADD NEW JOBS</a>
+                    <a href="/admin/cat/connect/new/list/job"
+                        class="btn-large waves-effect waves-light orange darken-2"> <i
+                            class="material-icons left">delete</i>DELETE,VIEW JOBS</a>
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="info-container">
+            <div class="display-log">
+                <% if (status==false) { %>
+                <div class="failed-status">
+                    <div>
+
+                        <i class="small material-icons">error</i>
+                    </div>
+                    <div class="status-text">
+
+                        Failed to add the job.
+                    </div>
+                </div>
+                <% } %>
+                <% if (status==true) { %>
+                <div class="success-status">
+                    <div>
+                        <i class="small material-icons">check_box</i>
+                    </div>
+                    <div class="status-text">
+                        Job was added!
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+        <div class="add-job">
+            <h5 align="center"><b>Enter a new job</b> </h5>
+            <p align="center">Jobs entered here will reflect in jobs list.</p>
+            <form method="POST" action="/admin/cat/connect/new/add/job">
+                <div class="row">
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="position">
+                        <label for="last_name">Position</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="code">
+                        <label for="last_name">Job Code</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="company">
+                        <label for="last_name">Company</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="location">
+                        <label for="last_name">Location</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="number" class="validate" name="ageLimit">
+                        <label for="last_name">Age limit</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="text" class="validate" name="qualification">
+                        <label for="last_name">Qualification</label>
+                    </div>
+
+                    <div class="input-field col s6 l4">
+                        <input id="last_name" type="number" class="validate" name="experience">
+                        <label for="last_name">Experience in Years</label>
+                    </div>
+                    <div class="input-field col s6 l4">
+                        <select class="browser-default" name="gender">
+                            <option value="" disabled selected>Select the gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="any">Any</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <textarea name="description" type="text" rows="10" placeholder="Add Some Discription"
+                        class="discription-text" value="Some description"></textarea>
+                </div>
+                <div class="row center">
+                    <button class="btn btn-warning center blue darken-2" type="submit">Add this job</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    <% include ../includes/footer %>
+</body>
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+</script>
+
+</html>
